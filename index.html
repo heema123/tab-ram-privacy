@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tab RAM Privacy Policy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: one narrow reading column, a small mono header strip, no cards. */
+  :root {
+    --bg: #f7f8f6;
+    --fg: #1b1f24;
+    --muted: #5f6774;
+    --rule: #d9ddd6;
+    --accent: #1f8a70;
+    --mono-bg: #eceee9;
+    --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1116; --fg: #e7eaf0; --muted: #8a92a3; --rule: #262c38; --accent: #4fd1b2; --mono-bg: #161a22; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1116; --fg: #e7eaf0; --muted: #8a92a3; --rule: #262c38; --accent: #4fd1b2; --mono-bg: #161a22; color-scheme: dark;
+  }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 40px 64px;
+  }
+  main { max-width: 640px; margin: 0 auto; }
+  .meta { font-family: var(--font-mono); font-size: 12px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; letter-spacing: .02em; margin-bottom: 28px; }
+  .meta span { background: var(--mono-bg); padding: 2px 8px; border-radius: 4px; }
+  h1 { font-size: 30px; font-weight: 600; line-height: 1.2; margin: 0 0 8px; text-wrap: balance; letter-spacing: -0.01em; }
+  .lede { font-size: 18px; color: var(--muted); margin: 0 0 32px; }
+  h2 { font-size: 17px; font-weight: 600; margin: 32px 0 8px; padding-top: 20px; border-top: 1px solid var(--rule); }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 20px; }
+  li { margin: 4px 0; }
+  li strong { font-weight: 500; }
+  code { font-family: var(--font-mono); font-size: 14px; background: var(--mono-bg); padding: 1px 5px; border-radius: 4px; }
+  .none { color: var(--accent); font-weight: 600; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="meta"><span>Tab RAM</span><span>Chrome extension</span><span>Effective 5 November 2026</span></div>
+  <h1>Tab RAM Privacy Policy</h1>
+  <p class="lede">Tab RAM does not collect, store, transmit or sell any personal data. Everything it does happens inside your browser.</p>
+
+  <h2>What the extension does</h2>
+  <p>Tab RAM shows an estimate of how much memory each open tab is using and lets you free, lock or close tabs. It can also free idle tabs on a schedule if you turn that on.</p>
+
+  <h2>Data collected</h2>
+  <p><span class="none">None.</span> The extension has no servers, makes no network requests, and contains no analytics, advertising or tracking code.</p>
+
+  <h2>What the extension reads, and why</h2>
+  <ul>
+    <li><strong>Tab titles, URLs and state</strong> (pinned, playing audio, already freed) are read to draw the list in the popup and to decide which tabs are safe to free. They are shown to you and discarded when the popup closes.</li>
+    <li><strong>Page memory signals</strong>: a small read-only script runs in each open tab to count DOM elements, images and media and to read the page's JavaScript heap size. It never reads page text, form contents, cookies or anything you type.</li>
+    <li><strong>System memory</strong> (free and total RAM) is read to show a summary line and, optionally, to run cleanup only under memory pressure.</li>
+  </ul>
+
+  <h2>Data stored on your device</h2>
+  <p>Your settings (auto-mode, thresholds, protected domains) are stored in Chrome's extension storage on your computer. Tab locks are kept only for the current browser session. Nothing is synced or uploaded by the extension.</p>
+
+  <h2>Permissions</h2>
+  <p>The extension requests <code>tabs</code>, <code>scripting</code>, <code>storage</code>, <code>alarms</code>, <code>system.memory</code>, <code>favicon</code> and access to all sites. Site access exists only so the memory probe can run on whatever pages you have open. On Chrome Dev and Canary the <code>processes</code> permission provides exact per-process figures; on Chrome stable it is unused.</p>
+
+  <h2>Third parties</h2>
+  <p>No data is shared with anyone, because no data leaves your browser.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the new version will be published at this address with an updated effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy can be sent through the Support tab of the extension's Chrome Web Store listing.</p>
+</main>
+</body>
+</html>
